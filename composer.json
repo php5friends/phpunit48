@@ -1,5 +1,5 @@
 {
-    "name": "phpunit/phpunit",
+    "name": "php5friends/phpunit48",
     "description": "The PHP Unit Testing framework.",
     "type": "library",
     "keywords": [
@@ -64,6 +64,9 @@
             "src/Framework/Assert/Functions.php",
             "tests/_files/CoveredFunction.php"
         ]
+    },
+    "provide": {
+        "phpunit/phpunit": "4.8.35"
     },
     "extra": {
         "branch-alias": {
