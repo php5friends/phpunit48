@@ -1,36 +1,27 @@
-# PHPUnit
+# PHPUnit48
 
-PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
+[![Latest Stable Version](https://img.shields.io/packagist/v/php5friends/phpunit48.svg?style=flat-square)](https://packagist.org/packages/php5friends/phpunit48)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.3.3-8892BF.svg?style=flat-square)](https://php.net/supported-versions.php)
+[![Build Status](https://img.shields.io/travis/php5friends/phpunit48/4.8.svg?style=flat-square)](https://phpunit.de/build-status.html)
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/phpunit/phpunit.svg?style=flat-square)](https://packagist.org/packages/phpunit/phpunit)
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.3.3-8892BF.svg?style=flat-square)](https://php.net/)
-[![Build Status](https://img.shields.io/travis/sebastianbergmann/phpunit/4.8.svg?style=flat-square)](https://phpunit.de/build-status.html)
+**PHPUnit48** is a variant of [PHPUnit](https://phpunit.de/).  The purpose of this project is to make PHPUnit 4.8 compatible with the new PHP and to make it compatible with PHPUnit 6.
+
+PHPUnit is an advanced product, but it is out of old PHP versions.  But unit testing is an important technique for migrating old projects to new versions.  This project bridges PHP 5.x to **PHP 7 and PHPUnit 6**.
+
+> PHPUnit is a programmer-oriented testing framework for PHP. It is an instance of the xUnit architecture for unit testing frameworks.
 
 ## Installation
 
-We distribute a [PHP Archive (PHAR)](https://php.net/phar) that has all required (as well as some optional) dependencies of PHPUnit bundled in a single file:
+You may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies.
 
-```bash
-$ wget https://phar.phpunit.de/phpunit.phar
-
-$ chmod +x phpunit.phar
-
-$ mv phpunit.phar /usr/local/bin/phpunit
+```sh
+$ cd path/to/your/php-project
+$ composer require --dev php5friends/phpunit
 ```
-
-You can also immediately use the PHAR after you have downloaded it, of course:
-
-```bash
-$ wget https://phar.phpunit.de/phpunit.phar
-
-$ php phpunit.phar
-```
-
-Alternatively, you may use [Composer](https://getcomposer.org/) to download and install PHPUnit as well as its dependencies. Please refer to the [documentation](https://phpunit.de/documentation.html) for details on how to do this.
 
 ## Contribute
 
-Please refer to [CONTRIBUTING.md](https://github.com/sebastianbergmann/phpunit/blob/master/CONTRIBUTING.md) for information on how to contribute to PHPUnit and its related projects.
+Please refer to [CONTRIBUTING.md](https://github.com/sebastianbergmann/phpunit/blob/master/.github/CONTRIBUTING.md) for information on how to contribute to PHPUnit and its related projects.
 
 ## List of Contributors
 
