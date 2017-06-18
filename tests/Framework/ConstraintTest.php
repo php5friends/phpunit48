@@ -884,9 +884,11 @@ EOF
         try {
             $constraint->evaluate($actual, 'custom message');
         } catch (PHPUnit_Framework_ExpectationFailedException $e) {
-            $this->assertEquals(
-              "custom message\n$message",
-              $this->trimnl(PHPUnit_Framework_TestFailure::exceptionToString($e))
+            // absorb the difference in the number of newlines
+            $pattern = preg_replace('/^@@ @@/mu', '*@@ @@', preg_quote($message, '/'));
+            $this->assertRegexp(
+                "/\Acustom message\n{$pattern}\z/",
+                $this->trimnl(PHPUnit_Framework_TestFailure::exceptionToString($e))
             );
 
             return;
