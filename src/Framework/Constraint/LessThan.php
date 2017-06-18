@@ -17,12 +17,12 @@
 class PHPUnit_Framework_Constraint_LessThan extends PHPUnit_Framework_Constraint
 {
     /**
-     * @var numeric
+     * @var int|float
      */
     protected $value;
 
     /**
-     * @param numeric $value
+     * @param int|float $value
      */
     public function __construct($value)
     {

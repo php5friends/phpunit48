@@ -43,6 +43,7 @@ class PHPUnit_Util_GlobalState
         return static::processIncludedFilesAsString(get_included_files());
     }
 
+    /** @suppress PhanUndeclaredConstant */
     public static function processIncludedFilesAsString(array $files)
     {
         $blacklist = new PHPUnit_Util_Blacklist;

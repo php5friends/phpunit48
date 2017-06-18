@@ -23,45 +23,109 @@ class Framework_TestListenerTest extends PHPUnit_Framework_TestCase implements P
     protected $result;
     protected $startCount;
 
+    /**
+     * An error occurred.
+     *
+     * @param PHPUnit_Framework_Test $test
+     * @param \Exception|\Throwable  $e
+     * @param float                  $time
+     */
     public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
         assert($e instanceof \Exception || $e instanceof \Error);
         $this->errorCount++;
     }
 
+    /**
+     * A failure occurred.
+     *
+     * @param PHPUnit_Framework_Test                 $test
+     * @param PHPUnit_Framework_AssertionFailedError $e
+     * @param float                                  $time
+     */
     public function addFailure(PHPUnit_Framework_Test $test, PHPUnit_Framework_AssertionFailedError $e, $time)
     {
         $this->failureCount++;
     }
 
+    /**
+     * Incomplete test.
+     *
+     * @param PHPUnit_Framework_Test $test
+     * @param \Exception|\Throwable  $e
+     * @param float                  $time
+     */
     public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->notImplementedCount++;
     }
 
+    /**
+     * Risky test.
+     *
+     * @param PHPUnit_Framework_Test $test
+     * @param \Exception|\Throwable  $e
+     * @param float                  $time
+     *
+     * @since  Method available since Release 4.0.0
+     */
     public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->riskyCount++;
     }
 
+    /**
+     * Skipped test.
+     *
+     * @param PHPUnit_Framework_Test $test
+     * @param \Exception|\Throwable  $e
+     * @param float                  $time
+     *
+     * @since  Method available since Release 3.0.0
+     */
     public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->skippedCount++;
     }
 
+    /**
+     * A testsuite started.
+     *
+     * @param PHPUnit_Framework_TestSuite $suite
+     *
+     * @since  Method available since Release 2.2.0
+     */
     public function startTestSuite(PHPUnit_Framework_TestSuite $suite)
     {
     }
 
+    /**
+     * A testsuite ended.
+     *
+     * @param PHPUnit_Framework_TestSuite $suite
+     *
+     * @since  Method available since Release 2.2.0
+     */
     public function endTestSuite(PHPUnit_Framework_TestSuite $suite)
     {
     }
 
+    /**
+     * A test started.
+     *
+     * @param PHPUnit_Framework_Test $test
+     */
     public function startTest(PHPUnit_Framework_Test $test)
     {
         $this->startCount++;
     }
 
+    /**
+     * A test ended.
+     *
+     * @param PHPUnit_Framework_Test $test
+     * @param float                  $time
+     */
     public function endTest(PHPUnit_Framework_Test $test, $time)
     {
         $this->endCount++;
