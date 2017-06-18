@@ -17,7 +17,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/sebastianbergmann/phpunit/issues"
+        "issues": "https://github.com/php5friends/phpunit48/issues"
     },
     "require": {
         "php": ">=5.3.3",
