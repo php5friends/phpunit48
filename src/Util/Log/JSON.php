@@ -34,10 +34,10 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
      * An error occurred.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeCase(
             'error',
@@ -74,10 +74,10 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
      * Incomplete test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeCase(
             'error',
@@ -94,12 +94,12 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
      * Risky test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 4.0.0
      */
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeCase(
             'error',
@@ -116,10 +116,10 @@ class PHPUnit_Util_Log_JSON extends PHPUnit_Util_Printer implements PHPUnit_Fram
      * Skipped test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeCase(
             'error',

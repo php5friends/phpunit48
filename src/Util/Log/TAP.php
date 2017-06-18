@@ -50,10 +50,10 @@ class PHPUnit_Util_Log_TAP extends PHPUnit_Util_Printer implements PHPUnit_Frame
      * An error occurred.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeNotOk($test, 'Error');
     }
@@ -104,10 +104,10 @@ class PHPUnit_Util_Log_TAP extends PHPUnit_Util_Printer implements PHPUnit_Frame
      * Incomplete test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->writeNotOk($test, '', 'TODO Incomplete Test');
     }
@@ -116,12 +116,12 @@ class PHPUnit_Util_Log_TAP extends PHPUnit_Util_Printer implements PHPUnit_Frame
      * Risky test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 4.0.0
      */
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->write(
             sprintf(
@@ -138,12 +138,12 @@ class PHPUnit_Util_Log_TAP extends PHPUnit_Util_Printer implements PHPUnit_Frame
      * Skipped test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 3.0.0
      */
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->write(
             sprintf(

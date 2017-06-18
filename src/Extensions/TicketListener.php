@@ -29,10 +29,10 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
      * An error occurred.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
     }
 
@@ -51,10 +51,10 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
      * Incomplete test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
     }
 
@@ -62,12 +62,12 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
      * Risky test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 4.0.0
      */
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
     }
 
@@ -75,12 +75,12 @@ abstract class PHPUnit_Extensions_TicketListener implements PHPUnit_Framework_Te
      * Skipped test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 3.0.0
      */
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
     }
 

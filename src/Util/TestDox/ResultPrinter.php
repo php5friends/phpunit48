@@ -98,10 +98,10 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
      * An error occurred.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
         if (!$this->isOfInterest($test)) {
             return;
@@ -132,10 +132,10 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
      * Incomplete test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      */
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         if (!$this->isOfInterest($test)) {
             return;
@@ -149,12 +149,12 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
      * Risky test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 4.0.0
      */
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         if (!$this->isOfInterest($test)) {
             return;
@@ -168,12 +168,12 @@ abstract class PHPUnit_Util_TestDox_ResultPrinter extends PHPUnit_Util_Printer i
      * Skipped test.
      *
      * @param PHPUnit_Framework_Test $test
-     * @param Exception              $e
+     * @param \Exception|\Throwable  $e
      * @param float                  $time
      *
      * @since  Method available since Release 3.0.0
      */
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         if (!$this->isOfInterest($test)) {
             return;
