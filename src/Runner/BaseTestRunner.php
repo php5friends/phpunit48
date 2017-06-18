@@ -42,7 +42,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
      * @param string $suiteClassFile
      * @param mixed  $suffixes
      *
-     * @return PHPUnit_Framework_Test
+     * @return PHPUnit_Framework_Test|null
      */
     public function getTest($suiteClassName, $suiteClassFile = '', $suffixes = '')
     {
@@ -68,7 +68,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
         } catch (PHPUnit_Framework_Exception $e) {
             $this->runFailed($e->getMessage());
 
-            return;
+            return null;
         }
 
         try {
@@ -79,7 +79,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
                     'suite() method must be static.'
                 );
 
-                return;
+                return null;
             }
 
             try {
@@ -92,7 +92,7 @@ abstract class PHPUnit_Runner_BaseTestRunner
                     )
                 );
 
-                return;
+                return null;
             }
         } catch (ReflectionException $e) {
             try {

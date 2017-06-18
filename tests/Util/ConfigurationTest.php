@@ -292,6 +292,7 @@ class Util_ConfigurationTest extends PHPUnit_Framework_TestCase
     /**
      * @backupGlobals enabled
      * @covers PHPUnit_Util_Configuration::handlePHPConfiguration
+     * @suppress PhanUndeclaredConstant
      */
     public function testPHPConfigurationIsHandledCorrectly()
     {

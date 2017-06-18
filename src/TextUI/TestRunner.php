@@ -1041,6 +1041,7 @@ class PHPUnit_TextUI_TestRunner extends PHPUnit_Runner_BaseTestRunner
 
     /**
      * @return PHP_CodeCoverage_Filter
+     * @suppress PhanUndeclaredConstant
      */
     private function getCodeCoverageFilter()
     {

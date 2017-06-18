@@ -43,7 +43,7 @@ class PHPUnit_Framework_Constraint_Count extends PHPUnit_Framework_Constraint
     /**
      * @param mixed $other
      *
-     * @return bool
+     * @return int|void
      */
     protected function getCountOf($other)
     {

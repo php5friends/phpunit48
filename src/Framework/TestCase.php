@@ -602,7 +602,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
      *
      * @param PHPUnit_Framework_TestResult $result
      *
-     * @return PHPUnit_Framework_TestResult
+     * @return PHPUnit_Framework_TestResult|null
      *
      * @throws PHPUnit_Framework_Exception
      */
@@ -623,7 +623,7 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
         }
 
         if (!$this instanceof PHPUnit_Framework_Warning && !$this->handleDependencies()) {
-            return;
+            return null;
         }
 
         if ($this->runTestInSeparateProcess === true &&

@@ -22,6 +22,7 @@ class PHPUnit_Util_Filter
      * @param bool      $asString
      *
      * @return string
+     * @suppress PhanUndeclaredConstant
      */
     public static function getFilteredStacktrace(Exception $e, $asString = true)
     {
