@@ -34,9 +34,9 @@ class PHPUnit_Framework_TestFailure
      * Constructs a TestFailure with the given test and exception.
      *
      * @param PHPUnit_Framework_Test $failedTest
-     * @param Exception              $thrownException
+     * @param \Exception|\Throwable  $thrownException
      */
-    public function __construct(PHPUnit_Framework_Test $failedTest, Exception $thrownException)
+    public function __construct(PHPUnit_Framework_Test $failedTest, $thrownException)
     {
         if ($failedTest instanceof PHPUnit_Framework_SelfDescribing) {
             $this->testName = $failedTest->toString();

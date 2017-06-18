@@ -23,8 +23,9 @@ class Framework_TestListenerTest extends PHPUnit_Framework_TestCase implements P
     protected $result;
     protected $startCount;
 
-    public function addError(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addError(PHPUnit_Framework_Test $test, $e, $time)
     {
+        assert($e instanceof \Exception || $e instanceof \Error);
         $this->errorCount++;
     }
 
@@ -33,17 +34,17 @@ class Framework_TestListenerTest extends PHPUnit_Framework_TestCase implements P
         $this->failureCount++;
     }
 
-    public function addIncompleteTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addIncompleteTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->notImplementedCount++;
     }
 
-    public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addRiskyTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->riskyCount++;
     }
 
-    public function addSkippedTest(PHPUnit_Framework_Test $test, Exception $e, $time)
+    public function addSkippedTest(PHPUnit_Framework_Test $test, $e, $time)
     {
         $this->skippedCount++;
     }
