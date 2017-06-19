@@ -78,13 +78,13 @@ class PHPUnit_Framework_TestFailure
     /**
      * Returns a description for an exception.
      *
-     * @param Exception $e
+     * @param \Exception|\Throwable $e
      *
      * @return string
      *
      * @since  Method available since Release 3.2.0
      */
-    public static function exceptionToString(Exception $e)
+    public static function exceptionToString($e)
     {
         if ($e instanceof PHPUnit_Framework_SelfDescribing) {
             $buffer = $e->toString();
