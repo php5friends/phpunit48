@@ -121,7 +121,6 @@
         <exec executable="${basedir}/build/tools/composer">
             <arg value="require"/>
             <arg value="phpunit/dbunit:~1.4"/>
-            <arg value="phpunit/phpunit-selenium:~1.4"/>
             <arg value="phpunit/php-invoker:~1.1"/>
         </exec>
 
@@ -259,13 +258,6 @@
         <copy todir="${basedir}/build/phar/php-invoker">
             <fileset dir="${basedir}/vendor/phpunit/php-invoker/src">
                 <include name="**/*.php"/>
-            </fileset>
-        </copy>
-
-        <copy todir="${basedir}/build/phar/phpunit-selenium">
-            <fileset dir="${basedir}/vendor/phpunit/phpunit-selenium/PHPUnit">
-                <include name="**/*.php"/>
-                <exclude name="**/Autoload.*"/>
             </fileset>
         </copy>
 
