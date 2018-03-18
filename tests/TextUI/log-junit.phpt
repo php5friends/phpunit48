@@ -12,7 +12,7 @@ require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
-PHPUnit %s by Sebastian Bergmann and contributors.
+PHPUnit48 %s by Sebastian Bergmann and contributors.  (modified by php5friends)
 
 .FEIS.<?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
@@ -27,7 +27,7 @@ Failed asserting that false is true.
     </testcase>
     <testcase name="testError" class="StatusTest" file="%s/StatusTest.php" line="%d" assertions="0" time="%s">
       <error type="Exception">StatusTest::testError
-Exception: 
+Exception:
 
 %s/StatusTest.php:%d
 </error>
@@ -42,7 +42,7 @@ Time: %s, Memory: %s
 There was 1 error:
 
 1) StatusTest::testError
-Exception: 
+Exception:
 
 %s/StatusTest.php:%d
 

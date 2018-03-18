@@ -8,7 +8,7 @@ require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
-PHPUnit %s by Sebastian Bergmann and contributors.
+PHPUnit48 %s by Sebastian Bergmann and contributors.  (modified by php5friends)
 
 Usage: phpunit [options] UnitTest [UnitTest.php]
        phpunit [options] <directory>

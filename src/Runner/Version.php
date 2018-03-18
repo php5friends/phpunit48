@@ -61,7 +61,7 @@ class PHPUnit_Runner_Version
      */
     public static function getVersionString()
     {
-        return 'PHPUnit ' . self::id() . ' by Sebastian Bergmann and contributors.';
+        return 'PHPUnit48 ' . self::id() . ' by Sebastian Bergmann and contributors.  (modified by php5friends)';
     }
 
     /**

@@ -11,9 +11,8 @@ require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
-PHPUnit %s by Sebastian Bergmann and contributors.
+PHPUnit48 %s by Sebastian Bergmann and contributors.  (modified by php5friends)
 
 BankAccount
  [x] Balance is initially zero
  [x] Balance cannot become negative
-
