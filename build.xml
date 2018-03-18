@@ -312,7 +312,7 @@
             <arg value="--hash"/>
             <arg value="SHA-1"/>
             <arg value="--output"/>
-            <arg path="${basedir}/build/phpunit-${_version}.phar"/>
+            <arg path="${basedir}/build/phpunit48-${_version}.phar"/>
             <arg value="--template"/>
             <arg path="${basedir}/build/binary-phar-autoload.php.in"/>
             <arg path="${basedir}/build/phar"/>
