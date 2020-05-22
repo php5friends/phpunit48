@@ -11,7 +11,7 @@ require __DIR__ . '/../bootstrap.php';
 PHPUnit_TextUI_Command::main();
 ?>
 --EXPECTF--
-QPHPUnit48 %s by Sebastian Bergmann and contributors.  (modified by php5friends)
+PHPUnit48 %s by Sebastian Bergmann and contributors.  (modified by php5friends)
 
 FFFFFFFFFFFFF
 
