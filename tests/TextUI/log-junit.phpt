@@ -27,7 +27,7 @@ Failed asserting that false is true.
     </testcase>
     <testcase name="testError" class="StatusTest" file="%s/StatusTest.php" line="%d" assertions="0" time="%s">
       <error type="Exception">StatusTest::testError
-Exception:
+Exception: 
 
 %s/StatusTest.php:%d
 </error>
@@ -42,7 +42,7 @@ Time: %s, Memory: %s
 There was 1 error:
 
 1) StatusTest::testError
-Exception:
+Exception: 
 
 %s/StatusTest.php:%d
 
