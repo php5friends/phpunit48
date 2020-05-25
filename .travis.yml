@@ -8,6 +8,10 @@ php:
   - 5.6
   - "7.0"
   - "7.1"
+  - "7.2"
+  - "7.3"
+  - "7.4"
+  - "nightly"
 
 env:
   matrix:
@@ -35,6 +39,8 @@ matrix:
      - php: 5.5
        dist: trusty
        env: DEPENDENCIES="low"
+   allow_failures:
+     - php: nightly
 
 dist: xenial
 sudo: false
