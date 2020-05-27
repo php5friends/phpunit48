@@ -1377,7 +1377,9 @@ EOF
 
         $this->assertTrue($constraint->evaluate($resource, '', true));
 
-        @fclose($resource);
+        if (is_resource($resource)) {
+            fclose($resource);
+        }
     }
 
     /**
