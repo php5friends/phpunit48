@@ -1,5 +1,8 @@
 --TEST--
 #578: Double printing of trace line for exceptions from notices and warnings
+--SKIPIF--
+<?php
+if (PHP_VERSION_ID >= 80000) die('Skipped: Error message changed in PHP8 or later'); ?>
 --FILE--
 <?php
 $_SERVER['argv'][1] = '--no-configuration';
