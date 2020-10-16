@@ -1,5 +1,8 @@
 --TEST--
 phpunit FatalTest --process-isolation ../_files/FatalTest.php
+--SKIPIF--
+<?php
+if (PHP_VERSION_ID >= 80000) die('Skipped: xdebug_disable() is obsolete in PHP8 or later'); ?>
 --FILE--
 <?php
 $_SERVER['argv'][1] = '--no-configuration';
