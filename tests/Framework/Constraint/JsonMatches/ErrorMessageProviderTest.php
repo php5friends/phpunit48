@@ -42,9 +42,13 @@ class Framework_Constraint_JsonMatches_ErrorMessageProviderTest extends PHPUnit_
 
     public static function determineJsonErrorDataprovider()
     {
+        $unknown_error = null;
+        if (PHP_VERSION_ID >= 80000) {
+            $unknown_error = 'Unknown error';
+        }
         return array(
             'JSON_ERROR_NONE'  => array(
-                null, 'json_error_none', ''
+                $unknown_error, 'json_error_none', ''
             ),
             'JSON_ERROR_DEPTH' => array(
                 'Maximum stack depth exceeded', JSON_ERROR_DEPTH, ''

@@ -966,10 +966,11 @@ abstract class PHPUnit_Framework_TestCase extends PHPUnit_Framework_Assert imple
             $this->fail($e->getMessage());
         }
 
+        $testArguments = array_merge($this->data, $this->dependencyInput);
         try {
             $testResult = $method->invokeArgs(
                 $this,
-                array_merge($this->data, $this->dependencyInput)
+                array_values($testArguments)
             );
         } catch (Throwable $_e) {
             $e = $_e;
