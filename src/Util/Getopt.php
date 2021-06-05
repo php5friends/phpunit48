@@ -144,7 +144,7 @@ class PHPUnit_Util_Getopt
 
             if (substr($long_opt, -1) == '=') {
                 if (substr($long_opt, -2) != '==') {
-                    if (!strlen($opt_arg)) {
+                    if (null === $opt_arg || strlen($opt_arg) < 1) {
                         $opt_arg = current($args);
                         next($args);
                         if (!($opt_arg)) {
