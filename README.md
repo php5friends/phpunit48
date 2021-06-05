@@ -16,7 +16,7 @@ You may use [Composer](https://getcomposer.org/) to download and install PHPUnit
 
 ```sh
 $ cd path/to/your/php-project
-$ composer require --dev php5friends/phpunit
+$ composer require --dev php5friends/phpunit48
 ```
 
 ## Contribute
