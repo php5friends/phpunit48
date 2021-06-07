@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/php5friends/phpunit48.svg?style=flat-square)](https://packagist.org/packages/php5friends/phpunit48)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.3.3-8892BF.svg?style=flat-square)](https://php.net/supported-versions.php)
-[![Build Status](https://img.shields.io/travis/php5friends/phpunit48/4.8.svg?style=flat-square)](https://travis-ci.org/php5friends/phpunit48)
+[![CI](https://github.com/php5friends/phpunit48/actions/workflows/ci.yml/badge.svg)](https://github.com/php5friends/phpunit48/actions/workflows/ci.yml)
 
 **PHPUnit48** is a variant of [PHPUnit](https://phpunit.de/).  The purpose of this project is to make PHPUnit 4.8 compatible with the new PHP and to make it compatible with PHPUnit 6.
 
@@ -16,7 +16,7 @@ You may use [Composer](https://getcomposer.org/) to download and install PHPUnit
 
 ```sh
 $ cd path/to/your/php-project
-$ composer require --dev php5friends/phpunit
+$ composer require --dev php5friends/phpunit48
 ```
 
 ## Contribute
