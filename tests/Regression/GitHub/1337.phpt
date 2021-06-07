@@ -1,5 +1,9 @@
 --TEST--
 GH-1337: Data Provider with \ at the end of the name breaks with process isolation
+--SKIPIF--
+<?php
+if (PHP_VERSION_ID >= 80100) die('Skipped: PHP 8.1 is deprecated'); ?>
+?>
 --FILE--
 <?php
 

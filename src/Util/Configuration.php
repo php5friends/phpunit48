@@ -514,22 +514,17 @@ class PHPUnit_Util_Configuration
 
         foreach (array('var', 'post', 'get', 'cookie', 'server', 'files', 'request') as $array) {
             // See https://github.com/sebastianbergmann/phpunit/issues/277
-            switch ($array) {
-                case 'var':
-                    $target = &$GLOBALS;
-                    break;
-
-                case 'server':
-                    $target = &$_SERVER;
-                    break;
-
-                default:
-                    $target = &$GLOBALS['_' . strtoupper($array)];
-                    break;
-            }
-
             foreach ($configuration[$array] as $name => $value) {
-                $target[$name] = $value;
+                switch ($array) {
+                    case 'var':
+                        $GLOBALS[$name] = $value;
+                        break;
+                    case 'server':
+                        $_SERVER[$name] = $value;
+                        break;
+                    default:
+                        $GLOBALS['_' . strtoupper($array)][$name] = $value;
+                }
             }
         }
 
